@@ -1,14 +1,14 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-gem "jekyll-theme-chirpy"
+gem "jekyll", "~> 4.2"
+gem "jekyll-theme-chirpy", "~> 5.3", ">= 5.3.2"
 
 group :jekyll_plugins do
-  gem "jekyll-feed"
-  gem "jekyll-seo-tag"
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-  gem "jekyll-archives"
+  gem "jekyll-feed", "~> 0.15"
+  gem "jekyll-seo-tag", "~> 2.7"
+  gem "jekyll-sitemap", "~> 1.4"
+  gem "jekyll-paginate", "~> 1.1"
+  gem "jekyll-archives", "~> 2.2"
 end
 
 gem "webrick", "~> 1.7"
