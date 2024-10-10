@@ -18,27 +18,39 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        ruby: [2.7, 3]
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0 # for posts's lastmod
+          fetch-depth: 0 # for posts' lastmod
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: ${{ matrix.ruby }}
+          ruby-version: 3.1.0 # Set Ruby version to 3.1.0
           bundler-cache: true
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '20' # Ensure using a stable Node.js version
+
+      - name: Install Dependencies
+        run: |
+          bundle install # Install Ruby gems
+          npm install # Install Node.js packages
 
       - name: Build Assets
-        run: npm i && npm run build
+        run: npm run build
 
       - name: Test Site
         run: bash tools/test
+
+      - name: Build Jekyll Site
+        run: |
+          bundle exec jekyll build # Build the Jekyll site
+
+      - name: Deploy Site
+        run: |
+          # Add your deployment command here, e.g., rsync, scp, or another method
+          echo "Deployment step would go here" 
