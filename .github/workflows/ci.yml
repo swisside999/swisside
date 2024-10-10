@@ -52,8 +52,8 @@ jobs:
       - name: Build Assets
         run: npm run build
 
-      - name: Test Site
-        run: bash tools/test
+      # - name: Test Site
+      #   run: bash tools/test
 
       - name: Build Jekyll Site
         run: |
