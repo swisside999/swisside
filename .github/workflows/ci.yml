@@ -28,7 +28,10 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.1.0 # Set Ruby version to 3.1.0
-          bundler-cache: true
+          bundler-cache: false # Disable caching temporarily
+
+      - name: Install Bundler
+        run: gem install bundler -v '~> 2.3' # Install a specific version of Bundler
 
       - name: Setup Node
         uses: actions/setup-node@v3
