@@ -218,6 +218,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-archives
+  - jekyll-include-cache
+
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
