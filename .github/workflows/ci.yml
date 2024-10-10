@@ -40,8 +40,14 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          bundle install --jobs=4 --retry=3 # Install Ruby gems with jobs and retry
+          bundle install --jobs=4 --retry=3 --verbose # Install Ruby gems with verbose output
           npm install # Install Node.js packages
+
+      - name: Debug Bundler
+        run: |
+          echo "Bundler version: $(bundle -v)"
+          echo "Gems installed:"
+          bundle list
 
       - name: Build Assets
         run: npm run build
@@ -56,4 +62,4 @@ jobs:
       - name: Deploy Site
         run: |
           # Add your deployment command here, e.g., rsync, scp, or another method
-          echo "Deployment step would go here" 
+          echo "Deployment step would go here"
