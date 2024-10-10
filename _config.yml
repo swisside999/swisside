@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://swisside999.github.io"
+url: "https://swisside999.github.io
 
 github:
   username: swisside999 # change to your GitHub username
@@ -35,7 +35,7 @@ social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: Damian Beukes
-  email: damian.beukes.007@gmail.com # change to your email address
+  email: swisside999@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/swisside999 # change to your Twitter homepage
@@ -88,7 +88,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: dark
+theme_mode: # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
@@ -214,17 +214,6 @@ exclude:
   - LICENSE
   - "*.config.js"
   - package*.json
-  - vendor
-  - Gemfile
-  - Gemfile.lock
-
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-archives
-  - jekyll-include-cache
 
 jekyll-archives:
   enabled: [categories, tags]
